@@ -8,4 +8,3 @@ class AddIndexes < ActiveRecord::Migration[6.1]
     add_index :likes, :post_id
   end
 end
-
