@@ -51,7 +51,7 @@ Ruby on Rails
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://github.com/Alabi12/Rails_BlogApp.git)
+- [Live Demo Link]()
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -77,38 +77,38 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-<!--
+
 Example command:
 
 ```sh
   cd my-project
-  gem install
+  sudo gem install ruby
+  sudo gem install rails
 ```
---->
+
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
   rails server
 ```
---->
+
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
+
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  bin/rails test test/models/comment_test.rb
+  bin/rails test test/models/user_test.rb
+  bin/rails test test/models/post_test.rb
+  bin/rails test test/models/like_test.rb
 ```
---->
+
 
 ### Deployment
 
