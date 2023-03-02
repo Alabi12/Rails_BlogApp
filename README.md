@@ -51,7 +51,7 @@ Ruby on Rails
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](Not yet)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -77,7 +77,6 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-
 Example command:
 
 ```sh
@@ -85,7 +84,6 @@ Example command:
   sudo gem install ruby
   sudo gem install rails
 ```
-
 
 ### Usage
 
@@ -95,12 +93,9 @@ To run the project, execute the following command:
   rails server
 ```
 
-
 ### Run tests
 
 To run tests, run the following command:
-
-
 
 ```sh
   bin/rails test test/models/comment_test.rb
@@ -109,16 +104,13 @@ To run tests, run the following command:
   bin/rails test test/models/like_test.rb
 ```
 
-
 ### Deployment
 
 You can deploy this project using:
 
-
 ```sh
-  project will be deployed at the completion stage.
+  Not yet deployed
 ```
-
 
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
