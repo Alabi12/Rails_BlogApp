@@ -43,16 +43,16 @@ ActiveRecord::Schema[7.0].define(version: 20_230_302_171_224) do
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
     t.integer 'author_id'
-    t.string 'author'
   end
 
   create_table 'users', force: :cascade do |t|
     t.string 'name'
     t.string 'bio'
     t.string 'photo_link'
-    t.string 'posts_counter'
+    t.integer 'posts_counter', default: 0
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
+    t.index ['name'], name: 'index_users_on_name'
   end
 
   add_foreign_key 'comments', 'posts'
