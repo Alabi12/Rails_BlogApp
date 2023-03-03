@@ -85,4 +85,4 @@ production:
   <<: *default
   database: rails_blog_development
   username: postgres
-  password: <%= ENV["wolo"] %>
+  password: wolo
