@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  # database: rails_blog
+  database: rails_blog_test
   database: rails_blog_development
   username: postgres
   password: wolo
