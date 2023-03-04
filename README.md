@@ -27,7 +27,7 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
-Ruby on Rails
+Rails
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -48,8 +48,6 @@ Ruby on Rails
 - **Add post**
 - **Add views**
 - **Display details**
-
-## 🚀 Live Demo <a name="live-demo"></a>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -75,50 +73,40 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-<!--
 Example command:
 
 ```sh
   cd my-project
-  gem install
+  sudo gem install ruby
+  sudo gem install rails
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
   rails server
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  bin/rails test test/models/comment_test.rb
+  bin/rails test test/models/user_test.rb
+  bin/rails test test/models/post_test.rb
+  bin/rails test test/models/like_test.rb
 ```
---->
 
 ### Deployment
 
 You can deploy this project using:
 
-<!--
-Example:
-
 ```sh
-
+  Not yet deployed
 ```
- -->
 
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,7 +139,7 @@ I would like to thank [@microverse](https://www.microverse.org/)
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/Alabi12/Rails_BlogApp/blob/e8aa46d19e1f0e413df26a25a6eaa1b0f1e28068/LICENSE) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
