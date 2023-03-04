@@ -51,7 +51,7 @@ Ruby on Rails
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://github.com/Alabi12/Rails_BlogApp.git)
+- [Live Demo Link]()
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
