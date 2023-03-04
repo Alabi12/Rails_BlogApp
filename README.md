@@ -27,7 +27,7 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
-Rails
+Ruby on Rails
 
 ### Tech Stack <a name="tech-stack"></a>
 
