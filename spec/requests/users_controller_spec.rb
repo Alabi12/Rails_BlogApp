@@ -12,7 +12,7 @@ RSpec.describe UsersController, type: :request do
 
   describe 'GET /users/:id' do
     it 'renders show template with correct placeholder text' do
-      get '/users/1'
+      get '/users/id'
       expect(response).to have_http_status(:success)
       expect(response).to render_template(:show)
     end
