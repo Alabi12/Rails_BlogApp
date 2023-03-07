@@ -15,6 +15,7 @@ RSpec.describe PostsController, type: :request do
       get '/users/id/posts/id'
       expect(response).to have_http_status(:success)
       expect(response).to render_template(:show)
+      expect(response.body).to include('Details of post')
     end
   end
 end
