@@ -9,4 +9,12 @@ RSpec.describe PostsController, type: :request do
       expect(response.body).to include('Here are lists of posts')
     end
   end
+
+  describe "GET /users/:id/posts/:id" do
+  it "renders show template with correct placeholder text" do
+      get "/users/id/posts/id"
+      expect(response).to have_http_status(:success)
+      expect(response).to render_template(:show)
+    end
+  end
 end
