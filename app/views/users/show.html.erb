@@ -1,2 +1,30 @@
 <h1>Details of a user</h1>
-<a href="../../">back </a>
+
+<%user = @user%>
+
+<div class="user-container">
+  <img src="<%= user.photo%>" alt="user-photo">
+  <div class="name-box">
+  <p class= "user-name"><%= link_to "#{user.name}", "#{users_path}/#{user.id}" %></p>
+  <p class= "user-number-of-post">Number of posts<%= user.posts_counter || 0%></p>
+  </div>
+</div>
+<div class="bio-of-user">
+    <p>Bio</p>
+    <p><%=user.bio%></p>
+</div>
+
+<div class="post-container">
+    <% user.recent_posts.each do |post |%>
+    <div class="post-container">
+        <p>Post #<%=post.id%>: <%= link_to "#{post.title}", "#{user.id}/posts#{post.id}"%></p>
+        <p><%=post.text[0..100]%>...</p>
+        <div class="post-comments-likes">
+        <p>Commernts: <%= post.comments_counter || 0%>, Likes: <%= post.likes_counter || 0%>
+        </div>
+    </div>
+    <% end %>
+</div>
+<form class="see-all-posts-btn" action="./<%=user.id%>/posts" method="get">
+  <input type="submit" value="See all posts">
+</form>
