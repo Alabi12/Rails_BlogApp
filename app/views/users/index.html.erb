@@ -1,7 +1,8 @@
-<section>
 <h1>Here are lists of users</h1>
 
 <% @users.each do |user| %>
+
+
 <div class="user-container">
   <img src="<%= user.photo%>" alt="user-photo">
   <div class="name-box">
@@ -11,4 +12,4 @@
 </div>
 <% end %>
 
-</section>
+
