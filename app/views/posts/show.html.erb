@@ -5,7 +5,7 @@
 <%post = @post %>
 <%user = @user %>
 
-<div class="post-contianer">
+<div class="post-container">
     <p>Post #<%=post.id%> by <%=user.name%>: <%=post.title%></p>
     <div class="post_comments_likes">
         <p>Comments: <%= post.comments_counter || 0%>, Likes: <%= post.likes_counter ||0%></p>
