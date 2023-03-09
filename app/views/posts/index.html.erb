@@ -5,7 +5,7 @@
 
 <div class="user-container">
   <img src= "<%=user.photo%>" alt="photo of user"/>
-  <div class="user-name-box">
+  <div class="name-box">
     <p class="user-name"><%=user.name%></p>
     <p class="user-number-of-posts">Number of posts: <%= user.posts_counter || 0%></p>
   </div>
@@ -13,7 +13,7 @@
 
 <div class="posts-container">
   <% Post.where(author_id:user.id).each do |post| %>
-    <div class="post-container">
+    <div class="post-container-m">
       <p>Post #<%=post.id%>: <%= link_to "#{post.title}", "#{user_posts_path}/#{post.id}" %></p>
       <p><%=post.text[0..100]%>...</p>
       <div class="post-comments-likes"> 
