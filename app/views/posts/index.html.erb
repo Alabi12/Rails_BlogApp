@@ -1,3 +1,35 @@
-<h1>Here are lists of posts</h1>
+<section>
+<h1>List of Posts</h1>
 
-<a href='../../'> back </a>
+<%user = @user%>
+
+<div class="user-container">
+  <img src= "<%=user.photo%>" alt="photo of user"/>
+  <div class="name-box">
+    <p class="user-name"><%=user.name%></p>
+    <p class="user-number-of-posts">Number of posts: <%= user.posts_counter || 0%></p>
+  </div>
+</div>
+
+<div class="posts-container">
+  <% Post.where(author_id:user.id).each do |post| %>
+    <div class="post-container-m">
+      <p>Post #<%=post.id%>: <%= link_to "#{post.title}", "#{user_posts_path}/#{post.id}" %></p>
+      <p><%=post.text[0..100]%>...</p>
+      <div class="post-comments-likes"> 
+        <p>Comments: <%= post.comments_counter || 0%>, Likes: <%= post.likes_counter || 0%></p>
+      </div>
+    </div>
+
+     <div class="comments-container">
+      <% post.recent_comments.each do |comment| %>
+        <div class="comment-container">
+          <%author = User.find_by(id: comment.author_id)%>
+          <p><%=author.name%>: <%=comment.text[0..100]%>...</p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+</section>

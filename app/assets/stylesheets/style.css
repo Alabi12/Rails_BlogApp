@@ -1,0 +1,70 @@
+body {
+  max-width: 512px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.main {
+  padding: 20px;
+}
+
+.user-container {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.user-container img {
+  width: 100px;
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+
+.name-box {
+  display: flex;
+  border: 1px solid;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.name-box a {
+  margin: 16px 0 0 16px;
+  font-size: 32px;
+}
+
+.user-name {
+  margin: 16px 0 0 16px;
+  font-size: 32px;
+  list-style: none;
+}
+
+.user-number-of-posts {
+  align-self: flex-end;
+}
+
+.bio-of-user {
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.post-container,
+.posts-container {
+  border: 1px solid;
+  gap: 10px;
+}
+
+.post-comments-likes {
+  display: flex;
+  justify-content: end;
+}
+
+.see-all-posts-btn {
+  text-align: center;
+  margin: 16px;
+}

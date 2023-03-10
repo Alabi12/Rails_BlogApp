@@ -1,2 +1,15 @@
 <h1>Here are lists of users</h1>
-<a href="../../">back </a>
+
+<% @users.each do |user| %>
+
+
+<div class="user-container">
+  <img src="<%= user.photo%>" alt="user-photo">
+  <div class="name-box">
+  <p class= "user-name"><%= link_to "#{user.name}", "#{users_path}/#{user.id}" %></p>
+  <p class= "user-number-of-post">Number of posts<%= user.posts_counter || 0%></p>
+  </div>
+</div>
+<% end %>
+
+

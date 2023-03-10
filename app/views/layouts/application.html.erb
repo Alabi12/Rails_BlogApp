@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BlogNew</title>
+    <title>Rails Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,17 @@
   </head>
 
   <body>
+  <nav>
+   <div class="logo">
+    <h1>My RailsBlog</h1>
+   </div>
+  </nav>
+    <div class="main">
     <%= yield %>
+    </div>
+
+    <footer class="Footer">
+    <p>&copy; 2023 || <%= Time.now.strftime('%m/%d/%Y %I:%M %p') %></p>
+    </footer>
   </body>
 </html>
