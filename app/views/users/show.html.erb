@@ -16,6 +16,10 @@
     <p><%=user.bio%></p>
 </div>
 
+<div>
+  <p><%= link_to "Create new post", "./#{user.id}/posts/new" %></p>
+</div>
+
 <div class="post-container">
     <% user.recent_posts.each do |post |%>
     <div class="post-container">

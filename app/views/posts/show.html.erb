@@ -2,15 +2,25 @@
 
 <h1>Details of Post</h1>
 
-<%post = @post %>
-<%user = @user %>
+<%post = @post%>
+<%user = @user%>
 
 <div class="post-container">
     <p>Post #<%=post.id%> by <%=user.name%>: <%=post.title%></p>
-    <div class="post_comments_likes">
-        <p>Comments: <%= post.comments_counter || 0%>, Likes: <%= post.likes_counter ||0%></p>
+    <div class="post-comments-likes">
+      <p>Comments: <%= post.comments_counter || 0%>, Likes: <%= post.likes_counter ||0%></p>
     </div>
     <p><%=post.text%></p>
+</div>
+
+<div>
+  <p><%= link_to "Create new comment", "./#{post.id}/comments/new" %></p>
+</div>
+
+<div>
+  <%= form_with url: "./#{@post.id}/likes", scope: :like do |form| %>
+    <%= form.submit "Like "%>
+  <% end %>
 </div>
 
 <div class="comments-container">
