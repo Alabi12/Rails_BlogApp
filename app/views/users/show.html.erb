@@ -32,7 +32,7 @@
     <% end %>
 </div>
 <form class="see-all-posts-btn" action="./<%=user.id%>/posts" method="get">
-  <input type="submit" value="See all posts">
+  <%= link_to 'See all posts', user_posts_path(@user) %>
 </form>
 
 </section>

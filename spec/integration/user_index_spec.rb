@@ -1,30 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe 'Users index page', type: :system do
-    describe 'confirm the content of the user index page' do
-    before :each do
-        @user_one = User.create(name: 'bob', photo: 'https://www.anisearch.de/images/character/cover/full/0/820.webp', bio: 'software developer', posts_counter: 0)
-        @user_two = User.create(name: 'alabi', photo: 'https://www.anisearch.de/images/character/cover/full/0/821.webp', bio: 'software engineer', posts_counter: 0)
-      end
-      it 'should show the right content' do
-        visit root_path
-        expect(page).to have_content('Here are lists of users')
+RSpec.describe 'Users index view', type: :system do
+  describe 'Index page' do
+    before(:each) do
+      @user = User.create(name: 'Robert',
+                          photo: 'https://www.anisearch.de/images/character/cover/full/0/820.webp', bio: 'Teacher from Mexico.', posts_counter: 0)
+      visit users_path
     end
 
-    it 'profile picture for each user' do
-        visit root_path
-        expect(page).to have_selector('img')
+    it 'Display users index content' do
+      expect(page).to have_content('Robert')
+      expect(page).to have_selector('img')
+      expect(page).to have_content('Number of posts')
+      click_link('Robert')
+      sleep(5)
+      expect(page).to have_current_path(user_path(@user))
     end
-
-    it 'number of posts each user written' do
-        visit root_path
-        expect(page).to have_content('Number of posts')
-    end
-
-    it 'When I click on a user, I am redirected to that user\'s show page' do
-        visit root_path
-        click_link 'bob'
-        expect(page).to have_content('software developer')
-    end
-   end
+  end
 end
