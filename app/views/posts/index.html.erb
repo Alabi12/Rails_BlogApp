@@ -11,6 +11,7 @@
   </div>
 </div>
 
+<p id='user-bio'><%=user.bio %></p>
 <div class="posts-container">
   <% Post.where(author_id:user.id).each do |post| %>
     <div class="post-container-m">

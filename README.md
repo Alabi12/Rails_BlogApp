@@ -118,6 +118,12 @@ You can deploy this project using:
 - Twitter: [@twitterhandle](https://twitter.com/wolo_robert)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/robert-alabi/)
 
+👤 **Abdullateef Bello**
+
+- GitHub: [@Ibnballo1](https://github.com/Ibnballo1/)
+- Twitter: [@webprotekh](https://twitter.com/webprotekh)
+- LinkedIn: [Abdullateef Bello](https://www.linkedin.com/in/abdullateef-bello-1b8006228/)
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Refactor the code**

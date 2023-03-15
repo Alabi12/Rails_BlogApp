@@ -23,7 +23,7 @@
 <div class="post-container">
     <% user.recent_posts.each do |post |%>
     <div class="post-container">
-        <p>Post #<%=post.id%>: <%= link_to "#{post.title}", "#{user.id}/posts#{post.id}"%></p>
+        <p>Post #<%=post.id%>: <%= link_to "#{post.title}", "#{user.id}/posts/#{post.id}"%></p>
         <p><%=post.text[0..100]%>...</p>
         <div class="post-comments-likes">
         <p>Commernts: <%= post.comments_counter || 0%>, Likes: <%= post.likes_counter || 0%>
@@ -31,8 +31,7 @@
     </div>
     <% end %>
 </div>
-<form class="see-all-posts-btn" action="./<%=user.id%>/posts" method="get">
-  <input type="submit" value="See all posts">
-</form>
+
+  <%= button_to 'See all posts', user_posts_path(@user), method: :get %>
 
 </section>
