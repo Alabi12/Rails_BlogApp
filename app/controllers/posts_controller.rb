@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @user = User.find(params[:user_id])
   end
@@ -33,5 +34,16 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
+  end
+
+  # posts_controller.rb
+
+  def show
+    @post = Post.find(params[:id])
+    authorize! :read, @post
+  end
+  
+  def index
+    @posts = Post.accessible_by(current_ability)
   end
 end
