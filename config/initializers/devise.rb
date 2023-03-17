@@ -246,6 +246,8 @@ Devise.setup do |config|
   # are using only default views.
   config.scoped_views = true
 
+  config.navigational_formats = ['"/"', :html, :turbo_stream]
+
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
   # config.default_scope = :user
@@ -268,6 +270,7 @@ Devise.setup do |config|
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
 
+  config.mailer_sender = 'wolo22001@gmail.com'
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
