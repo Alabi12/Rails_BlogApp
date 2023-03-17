@@ -17,9 +17,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.create!(params.require(:post)
       .permit(:title, :text)
-      .merge(author_id: current_user.id,
-             comments_counter: 0,
-             likes_counter: 0))
+      .merge(author_id: current_user.id,comments_counter: 0, likes_counter: 0))
     respond_to do |format|
       format.html do
         if @post.save
@@ -37,5 +35,12 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     authorize! :read, @post
     @user = User.find(params[:user_id])
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:notice] = 'Post successfully deleted'
+    redirect_to user_path(params[:user_id])
   end
 end

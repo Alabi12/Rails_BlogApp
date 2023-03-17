@@ -33,9 +33,17 @@
       <%author = User.find_by(id: comment.author_id)%>
       <p><%=author.name%>: <%=comment.text[0..100]%>...</p>
     </div>
+        <% if can? :destroy, Comment %>
+         <%= button_to "Delete Comment",
+          user_post_comment_path(comment.post.author_id, comment.post.id, comment), 
+          method: :delete, data: { turbo: false } %>
+      <% end %>
   <% end %>
 </div>
 
 <a href="../../">home </a>
 
+<% if can? :destroy, @post %>
+  <%= button_to "Delete a Post", user_post_path(@post.author_id, @post.id), method: :delete, data: { turbo: false } %>
+<% end %>
 </section>

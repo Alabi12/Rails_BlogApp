@@ -3,6 +3,7 @@ class Comment < ApplicationRecord
   belongs_to :post
 
   after_save :update_comments_counter
+  after_destroy :update_comments_counter
 
   def update_comments_counter()
     post = Post.find_by(id: post_id)
