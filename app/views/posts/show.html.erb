@@ -13,10 +13,6 @@
     <p><%=post.text%></p>
 </div>
 
-<% if can? :read, @post %>
-  <%= link_to "View", @post %>
-<% end %>
-
 <div>
   <p><%= link_to "Create new comment", "./#{post.id}/comments/new" %></p>
 </div>
@@ -44,6 +40,7 @@
 <a href="../../">home </a>
 
 <% if can? :destroy, @post %>
-  <%= button_to "Delete a Post", user_post_path(@post.author_id, @post.id), method: :delete, data: { turbo: false } %>
-<% end %>
+  <%= button_to "Delete a Post", user_post_path(@post.author_id, @post.id), method: :delete, data: { turbo: false } %>      
+
+  <% end %>
 </section>
