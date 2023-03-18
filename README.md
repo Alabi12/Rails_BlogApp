@@ -45,8 +45,8 @@ Rails
 
 ### Key Features <a name="key-features"></a>
 
-- **Add post**
-- **Add views**
+- **Add posts**
+- **Add comments**
 - **Display details**
 
 ## 💻 Getting Started <a name="getting-started"></a>
